@@ -1,24 +1,238 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--StartVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StartVC" customModule="BattleMath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="haV-iJ-Itm">
+                                <rect key="frame" x="137" y="617" width="101" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Смена игрока"/>
+                                <connections>
+                                    <action selector="changePlayerPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ea-fJ-0Wo"/>
+                                    <segue destination="Wvj-zH-XLW" kind="show" identifier="toChangePlayerVC" id="0m3-h8-Tpc"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="tHa-LM-TFf">
+                                <rect key="frame" x="50" y="242.5" width="275" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVJ-5I-JLR">
+                                        <rect key="frame" x="99.5" y="0.0" width="76" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMI-mq-EyO">
+                                        <rect key="frame" x="0.0" y="80" width="275" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSP-ah-DRM">
+                                        <rect key="frame" x="30" y="167" width="215" height="35"/>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="Начнем!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJn-0c-ke1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qSP-ah-DRM" firstAttribute="leading" secondItem="tHa-LM-TFf" secondAttribute="leading" constant="30" id="0KV-Ri-A1X"/>
+                                    <constraint firstAttribute="trailing" secondItem="qSP-ah-DRM" secondAttribute="trailing" constant="30" id="Iej-m7-3Hw"/>
+                                    <constraint firstItem="kMI-mq-EyO" firstAttribute="leading" secondItem="tHa-LM-TFf" secondAttribute="leading" id="rKi-NB-TIN"/>
+                                    <constraint firstAttribute="trailing" secondItem="kMI-mq-EyO" secondAttribute="trailing" id="yaA-Aa-Dur"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tHa-LM-TFf" secondAttribute="trailing" constant="50" id="6pV-2q-MCq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="haV-iJ-Itm" secondAttribute="bottom" constant="20" id="O63-2P-R3l"/>
+                            <constraint firstItem="haV-iJ-Itm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ogp-2D-xYj"/>
+                            <constraint firstItem="tHa-LM-TFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="byy-Hp-LxS"/>
+                            <constraint firstItem="tHa-LM-TFf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fY3-Wz-fVv"/>
+                            <constraint firstItem="tHa-LM-TFf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zjM-tL-waS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="changePlayerButton" destination="haV-iJ-Itm" id="LUv-eB-A6P"/>
+                        <outlet property="greetingLabel" destination="tVJ-5I-JLR" id="nOr-Vp-kvO"/>
+                        <outlet property="nameTextField" destination="kMI-mq-EyO" id="2t1-rj-z5L"/>
+                        <segue destination="kIQ-3n-Npk" kind="show" identifier="toMainVC" id="HyR-Sl-nhu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130" y="482"/>
+        </scene>
+        <!--Change PlayerVC-->
+        <scene sceneID="JDN-w4-4JE">
+            <objects>
+                <viewController id="Wvj-zH-XLW" customClass="ChangePlayerVC" customModule="BattleMath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="umv-WG-zNr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDm-xG-OCB">
+                                <rect key="frame" x="16" y="20" width="45" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="iZq-UB-imX"/>
+                                    <constraint firstAttribute="height" constant="30" id="vVu-Ge-obC"/>
+                                </constraints>
+                                <state key="normal" title="Назад"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="oxd-Vr-ZPE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя игрока" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="log-nr-Rvx">
+                                <rect key="frame" x="134.5" y="64" width="106" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uL3-Qp-VaD">
+                                <rect key="frame" x="10" y="160" width="355" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="7ng-ed-KVd">
+                                        <rect key="frame" x="0.0" y="28" width="355" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7ng-ed-KVd" id="BHZ-0q-oeI">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wvj-zH-XLW" id="qgr-Pt-PcC"/>
+                                    <outlet property="delegate" destination="Wvj-zH-XLW" id="T3l-C6-Z5i"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVb-zW-dYV">
+                                <rect key="frame" x="50" y="107" width="275" height="33"/>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Создать нового игрока?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createNewPlayerPressed" destination="Wvj-zH-XLW" eventType="touchUpInside" id="Pep-Af-ATV"/>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="pB4-zT-Hvv"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="createNewPlayer" id="1s2-ej-alm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lVb-zW-dYV" firstAttribute="leading" secondItem="bGG-yX-d2q" secondAttribute="leading" constant="50" id="58k-A7-HSo"/>
+                            <constraint firstItem="uL3-Qp-VaD" firstAttribute="leading" secondItem="bGG-yX-d2q" secondAttribute="leading" constant="10" id="Ewe-xK-8P6"/>
+                            <constraint firstItem="log-nr-Rvx" firstAttribute="top" secondItem="XDm-xG-OCB" secondAttribute="bottom" constant="14" id="JvF-Z8-XKu"/>
+                            <constraint firstItem="bGG-yX-d2q" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XDm-xG-OCB" secondAttribute="trailing" symbolic="YES" id="MQh-hM-jLb"/>
+                            <constraint firstItem="XDm-xG-OCB" firstAttribute="top" secondItem="bGG-yX-d2q" secondAttribute="top" id="Qey-Ph-snK"/>
+                            <constraint firstItem="bGG-yX-d2q" firstAttribute="trailing" secondItem="uL3-Qp-VaD" secondAttribute="trailing" constant="10" id="h6d-Kx-XVl"/>
+                            <constraint firstItem="XDm-xG-OCB" firstAttribute="leading" secondItem="bGG-yX-d2q" secondAttribute="leading" constant="16" id="hEo-OE-3GT"/>
+                            <constraint firstItem="bGG-yX-d2q" firstAttribute="bottom" secondItem="uL3-Qp-VaD" secondAttribute="bottom" constant="10" id="l7L-zu-Enk"/>
+                            <constraint firstItem="bGG-yX-d2q" firstAttribute="trailing" secondItem="lVb-zW-dYV" secondAttribute="trailing" constant="50" id="lPg-k5-ptF"/>
+                            <constraint firstItem="lVb-zW-dYV" firstAttribute="top" secondItem="log-nr-Rvx" secondAttribute="bottom" constant="20" id="sgs-xa-QUd"/>
+                            <constraint firstItem="uL3-Qp-VaD" firstAttribute="top" secondItem="lVb-zW-dYV" secondAttribute="bottom" constant="20" id="vHh-bm-Egt"/>
+                            <constraint firstItem="log-nr-Rvx" firstAttribute="centerX" secondItem="bGG-yX-d2q" secondAttribute="centerX" id="w3d-bs-WMh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bGG-yX-d2q"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="XDm-xG-OCB" id="hcM-iF-66t"/>
+                        <outlet property="createNewPlayerButton" destination="lVb-zW-dYV" id="EQf-OL-0c9"/>
+                        <outlet property="playerNameLabel" destination="log-nr-Rvx" id="WDb-gB-bEu"/>
+                        <outlet property="playersTable" destination="uL3-Qp-VaD" id="oZd-Uh-Es2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8R-dm-Yj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-938" y="1284"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="uqn-zp-kyn">
+            <objects>
+                <viewController id="kIQ-3n-Npk" customClass="MainVC" customModule="BattleMath" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XJ7-WM-Jzs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5W-t7-2Sr">
+                                <rect key="frame" x="130.5" y="40" width="114.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLw-Cb-wCG">
+                                <rect key="frame" x="20" y="83" width="335" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💰 100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh0-jd-Zwo">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💪🏻 100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuy-7y-iHC">
+                                        <rect key="frame" x="167.5" y="0.0" width="167.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Uh0-jd-Zwo" firstAttribute="width" secondItem="kuy-7y-iHC" secondAttribute="width" id="0pU-lL-RhG"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 1 = ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOT-59-UXi">
+                                <rect key="frame" x="10" y="197" width="355" height="44.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Q4-K3-04H" firstAttribute="trailing" secondItem="hOT-59-UXi" secondAttribute="trailing" constant="10" id="1fX-qT-f6U"/>
+                            <constraint firstItem="DLw-Cb-wCG" firstAttribute="leading" secondItem="3Q4-K3-04H" secondAttribute="leading" constant="20" id="6i5-gw-Ha8"/>
+                            <constraint firstItem="hOT-59-UXi" firstAttribute="leading" secondItem="3Q4-K3-04H" secondAttribute="leading" constant="10" id="7Jc-ql-9pX"/>
+                            <constraint firstItem="3Q4-K3-04H" firstAttribute="trailing" secondItem="DLw-Cb-wCG" secondAttribute="trailing" constant="20" id="LLF-pO-VHg"/>
+                            <constraint firstItem="Z5W-t7-2Sr" firstAttribute="top" secondItem="3Q4-K3-04H" secondAttribute="top" constant="20" id="NaY-kb-ocH"/>
+                            <constraint firstItem="DLw-Cb-wCG" firstAttribute="top" secondItem="Z5W-t7-2Sr" secondAttribute="bottom" constant="20" id="V02-dN-PdB"/>
+                            <constraint firstItem="Z5W-t7-2Sr" firstAttribute="centerX" secondItem="3Q4-K3-04H" secondAttribute="centerX" id="ZYV-wI-DBY"/>
+                            <constraint firstItem="hOT-59-UXi" firstAttribute="top" secondItem="DLw-Cb-wCG" secondAttribute="bottom" constant="93.5" id="bda-t9-Ilw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Q4-K3-04H"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Z5W-t7-2Sr" id="v1j-h8-IgP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCv-2w-vq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="27"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1s2-ej-alm"/>
+    </inferredMetricsTieBreakers>
 </document>
