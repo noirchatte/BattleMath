@@ -8,9 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1B5F0651659DB5B50755D44D /* Pods_BattleMath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED30A20CB630E531FE0715E4 /* Pods_BattleMath.framework */; };
+		8406915D22BFEBBB00925FE8 /* BuyingHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406915C22BFEBBB00925FE8 /* BuyingHeroCell.swift */; };
 		841C2CA422B2577200CB4077 /* ChangePlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C2CA322B2577200CB4077 /* ChangePlayerVC.swift */; };
+		841C2CC822B798F100CB4077 /* MainVC+ExamplesManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C2CC722B798F100CB4077 /* MainVC+ExamplesManaging.swift */; };
+		8432889E22C9486100E39456 /* MainVC+BuyingHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432889D22C9486100E39456 /* MainVC+BuyingHeroes.swift */; };
+		843288A022C9C9CE00E39456 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432889F22C9C9CE00E39456 /* Player.swift */; };
+		843288A222CA147600E39456 /* MainVC+UpgradeHeroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843288A122CA147600E39456 /* MainVC+UpgradeHeroe.swift */; };
+		843288A422CA1BD900E39456 /* MainVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843288A322CA1BD900E39456 /* MainVC+CollectionView.swift */; };
+		843288A622CB63AE00E39456 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843288A522CB63AE00E39456 /* StorageManager.swift */; };
+		843288A822CB670200E39456 /* MainVC+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843288A722CB670200E39456 /* MainVC+Alert.swift */; };
+		843288AA22CB675300E39456 /* MainVC+UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843288A922CB675300E39456 /* MainVC+UISetup.swift */; };
 		8432B86A22B17CA8004DCDB6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B86922B17CA8004DCDB6 /* MainVC.swift */; };
-		8432B86D22B17CC9004DCDB6 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B86C22B17CC9004DCDB6 /* Player.swift */; };
+		8432B86D22B17CC9004DCDB6 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B86C22B17CC9004DCDB6 /* Heroes.swift */; };
+		84505DED22C8C36100162819 /* MainVC+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505DEC22C8C36100162819 /* MainVC+Statistics.swift */; };
+		84505DEF22C8C91300162819 /* MainVC+BossBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505DEE22C8C91300162819 /* MainVC+BossBattle.swift */; };
+		847CB5F522B81606005450C3 /* HeroeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CB5F422B81606005450C3 /* HeroeCell.swift */; };
+		84C235BD22BE34A20003E638 /* DesignSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C235BC22BE34A20003E638 /* DesignSetup.swift */; };
 		84F31E4522B1798C004B0AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F31E4422B1798C004B0AAD /* AppDelegate.swift */; };
 		84F31E4722B1798C004B0AAD /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F31E4622B1798C004B0AAD /* StartVC.swift */; };
 		84F31E4A22B1798C004B0AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F31E4822B1798C004B0AAD /* Main.storyboard */; };
@@ -20,9 +33,22 @@
 
 /* Begin PBXFileReference section */
 		65C23634F5475DCCC345964C /* Pods-BattleMath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleMath.release.xcconfig"; path = "Target Support Files/Pods-BattleMath/Pods-BattleMath.release.xcconfig"; sourceTree = "<group>"; };
+		8406915C22BFEBBB00925FE8 /* BuyingHeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHeroCell.swift; sourceTree = "<group>"; };
 		841C2CA322B2577200CB4077 /* ChangePlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePlayerVC.swift; sourceTree = "<group>"; };
+		841C2CC722B798F100CB4077 /* MainVC+ExamplesManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+ExamplesManaging.swift"; sourceTree = "<group>"; };
+		8432889D22C9486100E39456 /* MainVC+BuyingHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+BuyingHeroes.swift"; sourceTree = "<group>"; };
+		8432889F22C9C9CE00E39456 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		843288A122CA147600E39456 /* MainVC+UpgradeHeroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UpgradeHeroe.swift"; sourceTree = "<group>"; };
+		843288A322CA1BD900E39456 /* MainVC+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+CollectionView.swift"; sourceTree = "<group>"; };
+		843288A522CB63AE00E39456 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		843288A722CB670200E39456 /* MainVC+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Alert.swift"; sourceTree = "<group>"; };
+		843288A922CB675300E39456 /* MainVC+UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UISetup.swift"; sourceTree = "<group>"; };
 		8432B86922B17CA8004DCDB6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		8432B86C22B17CC9004DCDB6 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8432B86C22B17CC9004DCDB6 /* Heroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
+		84505DEC22C8C36100162819 /* MainVC+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Statistics.swift"; sourceTree = "<group>"; };
+		84505DEE22C8C91300162819 /* MainVC+BossBattle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+BossBattle.swift"; sourceTree = "<group>"; };
+		847CB5F422B81606005450C3 /* HeroeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeCell.swift; sourceTree = "<group>"; };
+		84C235BC22BE34A20003E638 /* DesignSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSetup.swift; sourceTree = "<group>"; };
 		84F31E4122B1798C004B0AAD /* BattleMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F31E4422B1798C004B0AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F31E4622B1798C004B0AAD /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -54,12 +80,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8406916322C374B500925FE8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				84C235BC22BE34A20003E638 /* DesignSetup.swift */,
+				843288A522CB63AE00E39456 /* StorageManager.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		8432B86B22B17CBC004DCDB6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				84F31E4622B1798C004B0AAD /* StartVC.swift */,
-				841C2CA322B2577200CB4077 /* ChangePlayerVC.swift */,
-				8432B86922B17CA8004DCDB6 /* MainVC.swift */,
+				84C235B922BE2EBD0003E638 /* StartVC */,
+				84C235BA22BE2EC60003E638 /* MainVC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -67,9 +101,37 @@
 		8432B86E22B17CCE004DCDB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8432B86C22B17CC9004DCDB6 /* Player.swift */,
+				8432889F22C9C9CE00E39456 /* Player.swift */,
+				8432B86C22B17CC9004DCDB6 /* Heroes.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		84C235B922BE2EBD0003E638 /* StartVC */ = {
+			isa = PBXGroup;
+			children = (
+				84F31E4622B1798C004B0AAD /* StartVC.swift */,
+				841C2CA322B2577200CB4077 /* ChangePlayerVC.swift */,
+			);
+			path = StartVC;
+			sourceTree = "<group>";
+		};
+		84C235BA22BE2EC60003E638 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				8432B86922B17CA8004DCDB6 /* MainVC.swift */,
+				843288A722CB670200E39456 /* MainVC+Alert.swift */,
+				843288A922CB675300E39456 /* MainVC+UISetup.swift */,
+				841C2CC722B798F100CB4077 /* MainVC+ExamplesManaging.swift */,
+				843288A322CA1BD900E39456 /* MainVC+CollectionView.swift */,
+				847CB5F422B81606005450C3 /* HeroeCell.swift */,
+				843288A122CA147600E39456 /* MainVC+UpgradeHeroe.swift */,
+				8432889D22C9486100E39456 /* MainVC+BuyingHeroes.swift */,
+				8406915C22BFEBBB00925FE8 /* BuyingHeroCell.swift */,
+				84505DEE22C8C91300162819 /* MainVC+BossBattle.swift */,
+				84505DEC22C8C36100162819 /* MainVC+Statistics.swift */,
+			);
+			path = MainVC;
 			sourceTree = "<group>";
 		};
 		84F31E3822B1798C004B0AAD = {
@@ -96,6 +158,7 @@
 				84F31E4422B1798C004B0AAD /* AppDelegate.swift */,
 				84F31E4822B1798C004B0AAD /* Main.storyboard */,
 				8432B86E22B17CCE004DCDB6 /* Model */,
+				8406916322C374B500925FE8 /* SupportingFiles */,
 				8432B86B22B17CBC004DCDB6 /* Views */,
 				84F31E4B22B1798D004B0AAD /* Assets.xcassets */,
 				84F31E4D22B1798D004B0AAD /* LaunchScreen.storyboard */,
@@ -235,11 +298,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8432B86D22B17CC9004DCDB6 /* Player.swift in Sources */,
+				84C235BD22BE34A20003E638 /* DesignSetup.swift in Sources */,
+				8432B86D22B17CC9004DCDB6 /* Heroes.swift in Sources */,
+				84505DED22C8C36100162819 /* MainVC+Statistics.swift in Sources */,
 				84F31E4722B1798C004B0AAD /* StartVC.swift in Sources */,
+				843288A022C9C9CE00E39456 /* Player.swift in Sources */,
+				8432889E22C9486100E39456 /* MainVC+BuyingHeroes.swift in Sources */,
+				843288A422CA1BD900E39456 /* MainVC+CollectionView.swift in Sources */,
+				8406915D22BFEBBB00925FE8 /* BuyingHeroCell.swift in Sources */,
+				84505DEF22C8C91300162819 /* MainVC+BossBattle.swift in Sources */,
+				841C2CC822B798F100CB4077 /* MainVC+ExamplesManaging.swift in Sources */,
+				843288A822CB670200E39456 /* MainVC+Alert.swift in Sources */,
 				841C2CA422B2577200CB4077 /* ChangePlayerVC.swift in Sources */,
+				843288A222CA147600E39456 /* MainVC+UpgradeHeroe.swift in Sources */,
+				847CB5F522B81606005450C3 /* HeroeCell.swift in Sources */,
 				8432B86A22B17CA8004DCDB6 /* MainVC.swift in Sources */,
+				843288AA22CB675300E39456 /* MainVC+UISetup.swift in Sources */,
 				84F31E4522B1798C004B0AAD /* AppDelegate.swift in Sources */,
+				843288A622CB63AE00E39456 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AnnaKosss.BattleMath;
+				PRODUCT_BUNDLE_IDENTIFIER = AnnaKosss.BattleMath3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -412,7 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AnnaKosss.BattleMath;
+				PRODUCT_BUNDLE_IDENTIFIER = AnnaKosss.BattleMath3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
