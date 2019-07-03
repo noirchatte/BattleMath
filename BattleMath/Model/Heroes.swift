@@ -9,8 +9,6 @@
 import Foundation
 import RealmSwift
 
-let realm = try! Realm()
-
 class Heroes: Object {
     @objc dynamic var name = ""
     @objc dynamic var icon = ""

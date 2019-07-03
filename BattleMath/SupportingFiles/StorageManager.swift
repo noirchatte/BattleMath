@@ -9,7 +9,15 @@
 import Foundation
 import RealmSwift
 
+let realm = try! Realm()
+
 class StorageManager {
+    
+    static func saveNewPlayer(_ player: Player) {
+        try! realm.write {
+            realm.add(player)
+        }
+    }
     
     static func answerReward(player: Player, answerIsCorrect: Bool) {
         try! realm.write {

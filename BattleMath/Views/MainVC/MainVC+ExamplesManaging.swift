@@ -55,12 +55,12 @@ extension MainVC {
                 answerTextField.text = "\(a + b)"
                 answerTextField.textColor = .red
             }
-        }
-        
-        showAlert(title: title, message: message) {
-            StorageManager.answerReward(player: self.player, answerIsCorrect: correct)
-            self.setupUI()
-            self.setupExample()
+            
+            showAlert(title: title, message: message) {
+                StorageManager.answerReward(player: self.player, answerIsCorrect: correct)
+                self.setupUI()
+                self.setupExample()
+            }
         }
     }
 }

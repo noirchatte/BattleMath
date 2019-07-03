@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartVC: UIViewController {
+class StartVC: UIViewController, UITextFieldDelegate {
     
     var player = Player()
     private var hardnessLevel: Int?
@@ -39,6 +39,18 @@ class StartVC: UIViewController {
         }
     }
     
+    // MARK: - TextField Delegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true) // Скрывает клавиатуру, вызванную для любого объекта
+    }
+    
     @IBAction func hardnessLevelChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -54,6 +66,37 @@ class StartVC: UIViewController {
             hardnessLevel = 1
             hardnessDescription.text = DesignSetup.hardnessText[0]
         }
+    }
+    
+    @IBAction func startButtonPressed() {
+        
+        if let playerName = UserDefaults.standard.string(forKey: "currentPlayer") {
+            let predicate = NSPredicate(format: "name = %@", playerName)
+            guard let currentPlayer = realm.objects(Player.self).filter(predicate).first else { return }
+            player = currentPlayer
+        } else {
+            guard let name = nameTextField.text, name != "" else { return }
+            guard let hardness = hardnessLevel else { return }
+            
+            // Checking duplicated names
+            let predicate = NSPredicate(format: "name = %@", name)
+            if realm.objects(Player.self).filter(predicate).isEmpty {
+                player = Player(value: [name, 50, 20, hardness, 0, 0, 0,
+                                        [["Мишка", "🐻", 1, 1],
+                                         ["Зайка", "🐰", 1, 2]]])
+                StorageManager.saveNewPlayer(player)
+                UserDefaults.standard.set(player.name, forKey: "currentPlayer")
+            } else {
+                let alert = UIAlertController(title: "Внимание!", message: "Игрок с таким именем уже существет! Выбери другое имя.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default)
+                alert.addAction(okAction)
+                present(alert, animated: true)
+            }
+        }
+        self.performSegue(withIdentifier: "toMainVC", sender: self)
+    }
+    
+    @IBAction func changePlayerPressed() {
     }
     
     // MARK: - Setup interface
@@ -73,31 +116,4 @@ class StartVC: UIViewController {
     }
 }
 
-// MARK: - Buttons pressed
-
-extension StartVC {
-    
-    @IBAction func startButtonPressed() {
-        
-        if let playerName = UserDefaults.standard.string(forKey: "currentPlayer") {
-            let predicate = NSPredicate(format: "name = %@", playerName)
-            guard let currentPlayer = realm.objects(Player.self).filter(predicate).first else { return }
-            player = currentPlayer
-        } else {
-            guard let name = nameTextField.text, name != "" else { return }
-            guard let hardness = hardnessLevel else { return }
-                player = Player(value: [name, 50, 20, hardness, 0, 0, 0,
-                                        [["Мишка", "🐻", 1, 1],
-                                         ["Зайка", "🐰", 1, 2]]])
-                try! realm.write {
-                    realm.add(player)
-                }
-                UserDefaults.standard.set(player.name, forKey: "currentPlayer")
-        }
-        self.performSegue(withIdentifier: "toMainVC", sender: self)
-    }
-    
-    @IBAction func changePlayerPressed() {
-    }
-}
 

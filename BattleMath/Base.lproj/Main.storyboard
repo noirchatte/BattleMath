@@ -278,7 +278,7 @@
                                             <constraint firstAttribute="width" secondItem="oX4-qx-ZBo" secondAttribute="height" multiplier="4:3" id="tPi-wf-tE1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <outlet property="delegate" destination="kIQ-3n-Npk" id="4q8-tL-CAZ"/>
                                         </connections>

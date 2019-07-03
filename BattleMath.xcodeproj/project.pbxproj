@@ -20,6 +20,7 @@
 		843288AA22CB675300E39456 /* MainVC+UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843288A922CB675300E39456 /* MainVC+UISetup.swift */; };
 		8432B86A22B17CA8004DCDB6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B86922B17CA8004DCDB6 /* MainVC.swift */; };
 		8432B86D22B17CC9004DCDB6 /* Heroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B86C22B17CC9004DCDB6 /* Heroes.swift */; };
+		8437B48C22CCB6E50049D583 /* MainVC+TextFieldDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437B48B22CCB6E50049D583 /* MainVC+TextFieldDelegates.swift */; };
 		84505DED22C8C36100162819 /* MainVC+Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505DEC22C8C36100162819 /* MainVC+Statistics.swift */; };
 		84505DEF22C8C91300162819 /* MainVC+BossBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84505DEE22C8C91300162819 /* MainVC+BossBattle.swift */; };
 		847CB5F522B81606005450C3 /* HeroeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CB5F422B81606005450C3 /* HeroeCell.swift */; };
@@ -45,6 +46,7 @@
 		843288A922CB675300E39456 /* MainVC+UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UISetup.swift"; sourceTree = "<group>"; };
 		8432B86922B17CA8004DCDB6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8432B86C22B17CC9004DCDB6 /* Heroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heroes.swift; sourceTree = "<group>"; };
+		8437B48B22CCB6E50049D583 /* MainVC+TextFieldDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+TextFieldDelegates.swift"; sourceTree = "<group>"; };
 		84505DEC22C8C36100162819 /* MainVC+Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+Statistics.swift"; sourceTree = "<group>"; };
 		84505DEE22C8C91300162819 /* MainVC+BossBattle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+BossBattle.swift"; sourceTree = "<group>"; };
 		847CB5F422B81606005450C3 /* HeroeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeCell.swift; sourceTree = "<group>"; };
@@ -120,8 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				8432B86922B17CA8004DCDB6 /* MainVC.swift */,
-				843288A722CB670200E39456 /* MainVC+Alert.swift */,
 				843288A922CB675300E39456 /* MainVC+UISetup.swift */,
+				843288A722CB670200E39456 /* MainVC+Alert.swift */,
+				8437B48B22CCB6E50049D583 /* MainVC+TextFieldDelegates.swift */,
 				841C2CC722B798F100CB4077 /* MainVC+ExamplesManaging.swift */,
 				843288A322CA1BD900E39456 /* MainVC+CollectionView.swift */,
 				847CB5F422B81606005450C3 /* HeroeCell.swift */,
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84C235BD22BE34A20003E638 /* DesignSetup.swift in Sources */,
+				8437B48C22CCB6E50049D583 /* MainVC+TextFieldDelegates.swift in Sources */,
 				8432B86D22B17CC9004DCDB6 /* Heroes.swift in Sources */,
 				84505DED22C8C36100162819 /* MainVC+Statistics.swift in Sources */,
 				84F31E4722B1798C004B0AAD /* StartVC.swift in Sources */,

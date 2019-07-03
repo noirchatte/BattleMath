@@ -56,6 +56,7 @@ class MainVC: UIViewController {
         setupUI()
         setupExample()
         setupBlackView()
+        addDoneButtonTo(answerTextField)
     }
     
     // MARK: - Answer button pressed
